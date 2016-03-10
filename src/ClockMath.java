@@ -17,7 +17,7 @@ public class ClockMath {
 	
 	private static void getInput(){
 		try{
-			System.out.println("Please input a time (HHMM):");
+			System.out.print("Please input a time (HHMM): ");
 	    	  time = in.nextLine();
 	    	  if(!time.matches("\\d{4}")){
 	    		  throw new Exception("Invalid Format");
@@ -96,7 +96,7 @@ public class ClockMath {
 		
 	}
 	
-	private static float getAngleRealMinSec(int _hr, int _min, int _sec){
+	private static float getAngleRealMinSec(int _min, int _sec){
 		float angle = 0;
 		
 		
@@ -124,6 +124,7 @@ public class ClockMath {
 	
 	
 	private static void runTests(){
+		System.out.println("------");
 		System.out.println("Running Tests");
 		System.out.println("Simple - 1200 : "+ ((getAngleSimple(12, 00)==0.0)?"PASS": "FAIL") );
 		System.out.println("Simple - 1230 : "+ ((getAngleSimple(12, 30)==180.0)?"PASS": "FAIL") );
@@ -138,6 +139,9 @@ public class ClockMath {
 		System.out.println("Real - 1800 : "+ ((getAngleReal(18, 00)==180.0)?"PASS": "FAIL") );
 		System.out.println("Real - 0900 : "+ ((getAngleReal(9, 00)==90.0)?"PASS": "FAIL") );
 		System.out.println("Real - 1500 : "+ ((getAngleReal(15, 00)==90.0)?"PASS": "FAIL") );
+		
+		System.out.println("------");
+		System.out.println("Test End");
 		
 		
 	}
